@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import eid from './../assets/eid.jpg'
 import em from './../assets/em.jpg'
 import x from './../assets/x.jpg'
 import bkash from './../assets/bkash.gif'
@@ -45,9 +44,6 @@ export default function HomePage() {
         }, 3000);
     }
 
-    const PressBtn = () => {
-        setPress(true);
-    }
 
     return (
         <div className="min-h-screen w-screen flex justify-center items-center overflow-hidden"

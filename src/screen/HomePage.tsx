@@ -74,15 +74,25 @@ export default function HomePage() {
                             <h1 className='text-[13px] md:text-[15px] font-[poppins] font-medium text-white'>{state ? 'Copied' : 'Copy'}</h1>
                         </button>
                     </div>
-                    <div className='absolute bg-white top-0 left-0 w-[400px] h-[300px] flex items-center justify-center z-20 rounded-2xl' style={{ zIndex: press ? -20 : 20 }}>
-                    </div>
-                    <div className='absolute top-0 left-0 w-[400px] h-[300px] flex items-center justify-center z-30 animate-pulse rounded-2xl' style={{ zIndex: press ? -30 : 30 }}>
-                        <img src={em} className='w-full h-full block rounded-2xl' />
+                    <div
+                        className='absolute bg-white top-0 left-0 w-full h-full flex items-center justify-center rounded-2xl'
+                        style={{ zIndex: press ? -20 : 20 }}
+                    ></div>
+
+                    <div
+                        className='absolute top-0 left-0 w-full h-full flex items-center justify-center animate-pulse rounded-2xl'
+                        style={{ zIndex: press ? -30 : 30 }}
+                    >
+                        <img src={em} className='w-full h-full block rounded-2xl object-contain' />
                     </div>
                 </div>
-                <button className='bg-cyan-900 py-[10px] px-[20px] rounded-full mt-[30px] animate-bounce' onClick={handleButtonClick}>
-                    <h1 className='text-[16px] text-white font-[poppins] font-bold'>ভিতরে কী আছে জানতে বক্সটি খুলুন 👀🎁</h1>
-                </button>
+                {
+                    !press && (
+                        <button className='bg-cyan-900 py-[10px] px-[20px] rounded-full mt-[30px] animate-bounce' onClick={handleButtonClick}>
+                            <h1 className='text-[16px] text-white font-[poppins] font-bold'>ভিতরে কী আছে জানতে বক্সটি খুলুন 👀🎁</h1>
+                        </button>
+                    )
+                }
             </div>
 
         </div>

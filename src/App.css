@@ -1,0 +1,6 @@
+/* default viewport-unit that will be updated by JS */
+:root {
+  --vh: 1vh;
+}
+
+/* other global styles can go here */
